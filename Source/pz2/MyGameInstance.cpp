@@ -2,6 +2,9 @@
 
 #include "MyGameInstance.h"
 
-
+void UMyGameInstance::Init()
+{
+	UserProfile = NewObject<UMyUserProfile>();
+}
 
 

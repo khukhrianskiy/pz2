@@ -4,18 +4,21 @@
 
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
-#include "Inventory.h" 
-#include "MyUserProfile.generated.h"
+#include "Item.h"
+#include "Inventory.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class PZ2_API UMyUserProfile : public UObject
+class PZ2_API UInventory : public UObject
 {
 	GENERATED_BODY()
-public:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	UInventory* Inventory;
 
+public:
+	UInventory();
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item")
+	TArray<UItem*> ItemList;
+	
 };
